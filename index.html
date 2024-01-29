@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+.navbar {
+float:right;
+display:inline;
+margin-right:10px;
+margin-left:10px;
+margin-top:5px;
+margin-bottom:10px;
+padding-left:5px;
+padding-right:5px;
+background-color:white;
+height:80%
+}
+
+
+.navbar:hover {
+background-color:gray;
+}
+.navbar:hover p {
+color:white;
+}
+</style>
+</head>
+<body style="background-color:gray;" id="body">
+
+<div style="background-color:red;width:89%;height:50px;position:fixed;padding-right:1%; margin-left:5%;margin-right:5%;">
+
+<div style="display:inline;float:left; border-right:5px solid gray"><p>Hot Beans Web</p></div>
+<div style="float:left;
+display:inline;
+margin-right:10px;
+margin-left:10px;
+margin-top:5px;
+margin-bottom:10px;
+padding-left:5px;
+padding-right:5px;
+background-color:white;
+height:80%
+" onclick="document.getElementById('body').style.backgroundColor='white'">
+<p>colourblind background</p></div>
+<div class="navbar" onclick="document.getElementById('websiteframe').src='apply.html'"><p>Apply</p></div>
+<div class="navbar" onclick="document.getElementById('websiteframe').src='requirements.html'"><p>Requirements</p></div>
+<div class="navbar" onclick="document.getElementById('websiteframe').src='staff.html'"><p>Staff</p></div>
+<div class="navbar" onclick="document.getElementById('websiteframe').src='about.html'"><p>About</p></div>
+<div class="navbar" onclick="document.getElementById('websiteframe').src='homepage.html'"><p>Home</p></div>
+
+</div>
+<iframe src="homepage.html" style="width:100%;margin-top:60px;height:90%" id="websiteframe"></iframe>
+</body>
+</html>

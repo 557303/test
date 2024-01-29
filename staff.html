@@ -1,0 +1,136 @@
+<html>
+<body id="test" style="background-image:url('https://publichealth.llu.edu/sites/publichealth.llu.edu/files/wp-content/uploads/2014/06/mC2H7Om.jpg');background-attachment:fixed;height:10000px;display:flex;">
+<script>
+document.getElementById("test").scrollTop = 5002;
+i=1;
+window.addEventListener("scroll", move);
+pos=25;
+scrolled=document.getElementById("test").scrollTop;
+function move() {
+document.getElementById(i).style.visibility= "visible";
+if (document.getElementById("test").scrollTop >=5001) { //check it is above range
+if (document.getElementById("test").scrollTop <5800) { //check below range
+if (document.getElementById("test").scrollTop <5400) { //check if it is at the first part
+if (document.getElementById("test").scrollTop>scrolled ) { //scroll down
+pos=pos+1;
+poscode=pos+"%";
+document.getElementById(i).style.top=poscode;
+} //scroll down in first part
+else { //scroll up in first part
+pos=pos-1;
+poscode=pos+"%";
+document.getElementById(i).style.top=poscode;
+} //scroll up in first part
+} // check first part
+else if(document.getElementById("test").scrollTop >5500){ //second part
+if (document.getElementById("test").scrollTop>scrolled ) { //scroll down
+pos=pos-1;
+poscode=pos+"%";
+document.getElementById(i).style.top=poscode;
+} //scroll down in second part
+else  { //scroll up in second part
+pos=pos+1;
+poscode=pos+"%";
+document.getElementById(i).style.top=poscode;
+} //scroll up in second part
+} //end second part
+else { //replace i
+
+y=i+1
+if (document.getElementById("test").scrollTop>scrolled) { //replace i down
+elementdupe= document.createElement("div");
+
+elementdupe.innerHTML = document.getElementById(y).innerHTML;
+elementdupe.style= "position:fixed;background-color:grey;top:25%;left:50%;height: 200px; width:400px"
+
+elementdupe.id= y+"b";
+document.body.appendChild(elementdupe)
+document.getElementById(y).style.visibility="hidden"
+} //replace i down
+else { //replace i up
+document.getElementById(y).style.visibility="visible"
+document.getElementById(y+"b").remove()
+} //replace i up
+} //replace i
+} //check below range
+else { //below range
+document.getElementById(i).top="25%"
+pos=25;
+if (i!="5") {
+document.getElementById(i).style.visibility= "hidden"
+i++
+}
+document.getElementById("test").scrollTop = 5002;
+let working=true
+while (working) {
+try {
+document.getElementById(i).style.visibility = "visible"
+document.getElementById(i+"b").remove() }
+catch {
+working=false
+}
+
+} //while 
+
+} // below range
+} //check within above range 
+else{
+document.getElementById("test").scrollTop = 5002;
+document.getElementById(i).top="25%"
+pos=25;
+if (i!="1") {
+i=i-1
+document.getElementById(i).top="25%"
+document.getElementById(i-1).top="25%"
+document.getElementById(i).style.visibility= "visible"
+}
+}
+
+
+scrolled= document.getElementById("test").scrollTop
+if (i=="5") {
+document.getElementById(i).top="25%"
+pos=25;
+}
+} //function
+
+</script>
+<div style="background-color:grey; position:fixed; float:left">
+<p>scroll to see the other staff <br> this page may not function on mobile</p>
+</div>
+
+<div style="position:fixed;background-color:grey;top:25%;left:50%;height: 200px; width:400px" id="5">
+<img src="https://www.coffeehit.co.uk/cdn/shop/articles/24d43c8f73f91fcd723ea47f46792489_600x.jpg?v=1647852858" height="200px" width="150px" style="float:left"></img>
+
+
+<h1>bean 5</h1>
+<p>bean 5, the twin of bean 4, is the head of the bean resource department. a delightful department that isn't currently accepting applications.</p>
+</div>
+<div style="position:fixed;background-color:grey;top:25%;left:50%;height: 200px; width:400px" id="4">
+
+<img src="https://www.coffeehit.co.uk/cdn/shop/articles/24d43c8f73f91fcd723ea47f46792489_600x.jpg?v=1647852858" height="200px" width="150px" style="float:left"></img>
+<h1>bean 4</h1>
+<p>bean 4 is the head of the content department; the best department</p>
+</div>
+<div style="position:fixed;background-color:grey;top:25%;left:50%;height: 200px; width:400px" id="3">
+
+<img src="https://media01.stockfood.com/largepreviews/Mjc5MjEzMjg=/00900688-A-Single-Green-Bean.jpg" height="200px" width="150px" style="float:left"></img>
+<h1>bean 3</h1>
+<p>bean 3 is the head of the design department. they have designed 200 websites</p>
+</div>
+<div style="position:fixed;background-color:grey;top:25%;left:50%;height: 200px; width:400px" id="2">
+
+<img src="https://www.thespruce.com/thmb/p1Iawi4HbLI2QdfVINurZYbNOoc=/fit-in/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/Web_1500-Red-anywhere-beanbag-leticia-almeida-photo-06-5572b8f2e2f1443ab193fcb436f10ea6.jpg" height="200px" width="150px" style="float:left"</img>
+<h1>bean 2</h1>
+<p>bean 2 is the head of the coding department. they have contributed to over 500 websites </p>
+</div>
+</div>
+<div style="position:fixed;background-color:grey;top:25%;left:50%;height: 200px; width:400px" id="1">
+
+<img src="https://pyxis.nymag.com/v1/imgs/4e7/109/9ca3a0b4352ca3ff74b89cb208ceda6ab5-kidney-bean.jpg" height="200px" width="150px" style="float:left"</img>
+<h1>bean 1</h1>
+<p>bean 1 is the owner of Hot Beans. They have been working in the company for half a decade. </p>
+</div>
+</body>
+
+</html>

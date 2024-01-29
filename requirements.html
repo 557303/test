@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<div style="background-color:white" onclick="for(var i=0; i<document.getElementsByTagName('div').length; i++) {document.getElementsByTagName('div')[i].style.display='none'} ; document.getElementById('devreq').style.display='block'">
+<h1 align="center" style="visibility=visible;">
+Developer
+</h1>
+</div>
+<div style="background-color:white" onclick="for(var i=0; i<document.getElementsByTagName('div').length; i++) {document.getElementsByTagName('div')[i].style.display='none'}; document.getElementById('desreq').style.display='block'">
+<h1 align="center">
+Designer
+</h1>
+</div>
+<div style="background-color:white" onclick="for(var i=0; i<document.getElementsByTagName('div').length; i++) {document.getElementsByTagName('div')[i].style.display='none'} ; document.getElementById('tesreq').style.display='block'">
+<h1 align="center">
+Tester
+</h1>
+</div>
+
+<div style="background-color:white; display:none" id="devreq">
+<button onclick="for(var i=0; i<document.getElementsByTagName('div').length; i++) {document.getElementsByTagName('div')[i].style.display='block'} ; document.getElementById('devreq').style.display='none' ; document.getElementById('desreq').style.display='none'; document.getElementById('tesreq').style.display='none'">
+x
+</button>
+<p>
+the requirements for the website developer job are: at least one high level qualification related to website development</p>
+<p style="text-decoration:underline" onclick="alert('on clicking this message it would bring you to a website development course but I could not think of any')" >
+if you are missing a qualification click here to go to an suitable course
+</p>
+</div>
+
+<div style="background-color:white; display:none" id="desreq">
+<button onclick="for(var i=0; i<document.getElementsByTagName('div').length; i++) {document.getElementsByTagName('div')[i].style.display='block'} ; document.getElementById('desreq').style.display='none' ; document.getElementById('devreq').style.display='none'; document.getElementById('tesreq').style.display='none'">
+x
+</button>
+<p>
+the requirements for the website designer job are: at least one high level qualification related to website design
+</p>
+<p style="text-decoration:underline" onclick="alert('on clicking this message it would bring you to a website design course but I could not think of any')" >
+if you are missing a qualification click here to go to an suitable course
+</p>
+</div>
+
+<div style="background-color:white; display:none" id="tesreq">
+<button onclick="for(var i=0; i<document.getElementsByTagName('div').length; i++) {document.getElementsByTagName('div')[i].style.display='block'} ; document.getElementById('desreq').style.display='none' ; document.getElementById('devreq').style.display='none' ; document.getElementById('tesreq').style.display='none'">
+x
+</button>
+<p>
+the requirements for the website designer job are: at least one high level qualification related to website testing
+</p>
+<p style="text-decoration:underline" onclick="alert('on clicking this message it would bring you to a website testing course but I could not think of any')" >
+if you are missing a qualification click here to go to an suitable course
+</p>
+</div>
+</html>
