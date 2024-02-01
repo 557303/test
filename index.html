@@ -21,6 +21,13 @@ background-color:gray;
 .navbar:hover p {
 color:white;
 }
+
+media screen and (max-width:500px) {
+.navbar {
+visibility: hidden
+}
+  
+}
 </style>
 </head>
 <body style="background-color:gray;" id="body">
@@ -45,7 +52,7 @@ height:80%
 <div class="navbar" onclick="document.getElementById('websiteframe').src='staff.html'"><p>Staff</p></div>
 <div class="navbar" onclick="document.getElementById('websiteframe').src='about.html'"><p>About</p></div>
 <div class="navbar" onclick="document.getElementById('websiteframe').src='homepage.html'"><p>Home</p></div>
-
+<button style="float:right; font-size:1.5em" onclick="document.getElementById('websiteframe').src='menu.html'">menu</button>
 </div>
 <iframe src="homepage.html" style="width:100%;margin-top:60px;height:90%" id="websiteframe"></iframe>
 </body>
